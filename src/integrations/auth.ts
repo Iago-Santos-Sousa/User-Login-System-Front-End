@@ -18,7 +18,7 @@ interface UserResponse {
 
 export const loginAPi = () => ({
   login: async ({ email, password }: UserInfos): Promise<UserResponse> => {
-    const response = await api.post<UserResponse>("/login", {
+    const response = await api.post<UserResponse>("/sign", {
       email,
       password,
     });
