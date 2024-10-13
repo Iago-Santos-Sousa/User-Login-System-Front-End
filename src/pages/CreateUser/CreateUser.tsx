@@ -18,7 +18,7 @@ type Inputs = {
   email: string;
 };
 
-const CreateUser = () => {
+const CreateUser: React.FC = () => {
   const [loginError, setLoginError] = useState<string>("");
   const [showPassword, setShowPassword] = useState(false);
   const [confirmShowPassword, setConfirmShowPassword] = useState(false);

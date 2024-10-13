@@ -1,6 +1,6 @@
 import React from "react";
 
-const Error404 = () => {
+const Error404: React.FC = () => {
   return <div>Error404</div>;
 };
 

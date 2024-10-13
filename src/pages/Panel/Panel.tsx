@@ -1,11 +1,13 @@
 import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 import { Outlet, useLocation } from "react-router-dom";
 
-const Panel = () => {
+const Panel: React.FC = () => {
   return (
-    <div className="h-screen w-full">
+    <div className="panel">
       <Header />
       <Outlet />
+      <Footer />
     </div>
   );
 };

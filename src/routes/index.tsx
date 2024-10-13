@@ -14,6 +14,7 @@ import AuthenticatedRoute from "./AuthenticatedRoute";
 import ProfileCard from "../pages/ProfileCard/ProfileCard";
 import ForgotPassword from "../pages/ForgotPassword/ForgotPassword";
 import ResetPassword from "../pages/ResetPassword/ResetPassword";
+import SharedLayout from "../components/SharedLayout";
 
 interface AboutPageProps extends RouteComponentProps {}
 
@@ -33,8 +34,23 @@ const AllRoutes: React.FC<AboutPageProps> = () => {
             </AuthenticatedRoute>
           }
         >
-          <Route index element={<ProfileCard />} />
-          <Route path="user-details/:userId" element={<UserDetails />} />
+          <Route
+            index
+            element={
+              <SharedLayout>
+                <ProfileCard />
+              </SharedLayout>
+            }
+          />
+          {/* <Route path="user-details/:userId" element={<UserDetails />} /> */}
+          <Route
+            path="user-details"
+            element={
+              <SharedLayout>
+                <UserDetails />
+              </SharedLayout>
+            }
+          />
         </Route>
         <Route path="*" element={<Error404 />} />
       </Routes>

@@ -14,7 +14,7 @@ type Inputs = {
   confirm_password: string;
 };
 
-const ResetPassword = () => {
+const ResetPassword: React.FC = () => {
   const [loginError, setLoginError] = useState<string>("");
   const [showPassword, setShowPassword] = useState(false);
   const [confirmShowPassword, setConfirmShowPassword] = useState(false);

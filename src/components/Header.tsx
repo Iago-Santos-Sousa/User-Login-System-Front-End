@@ -8,7 +8,7 @@ const Header = () => {
   const navigate: NavigateFunction = useNavigate();
 
   return (
-    <div className="w-full bg-prymaryBlue py-4 flex justify-between items-center px-8">
+    <header className="w-full bg-prymaryBlue py-4 flex justify-between items-center px-8">
       <div className="logo-img w-[80px] h-[80px]">
         <img src={userLogo} alt="user-logo" className="w-full h-full" />
       </div>
@@ -34,7 +34,7 @@ const Header = () => {
           </ul>
         </div>
       </nav>
-    </div>
+    </header>
   );
 };
 

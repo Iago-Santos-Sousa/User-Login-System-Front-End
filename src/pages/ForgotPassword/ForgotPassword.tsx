@@ -10,7 +10,7 @@ type Inputs = {
   email: string;
 };
 
-const ForgotPassword = () => {
+const ForgotPassword: React.FC = () => {
   const {
     register,
     handleSubmit,

@@ -14,7 +14,7 @@ type Inputs = {
   password: string;
 };
 
-const LoginPage = () => {
+const LoginPage: React.FC = () => {
   const [loginError, setLoginError] = useState<string>("");
   const [showPassword, setShowPassword] = useState(false);
 
