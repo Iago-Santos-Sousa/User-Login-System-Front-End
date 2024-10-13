@@ -6,9 +6,12 @@ import axios, {
   AxiosError,
 } from "axios";
 
-// Crie uma instância do Axios com a URL base
+const API_BASE_URL: string =
+  import.meta.env.VITE_API_BASE_URL ?? "http://localhost:3000/api";
+
+// Crie uma instância do Axios com a URL base da API
 const api: AxiosInstance = axios.create({
-  baseURL: "http://localhost:3000/api",
+  baseURL: API_BASE_URL,
 });
 
 // Adicione um interceptor de requisição
