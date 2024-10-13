@@ -46,20 +46,7 @@ export const userApi = () => ({
     return response.data;
   },
 
-  checkUser: async (): Promise<number> => {
-    try {
-      const response: AxiosResponse = await api.get("/teste");
-      return response.status;
-    } catch (error) {
-      if (typeof error === "string") {
-        return 0;
-      } else if (error instanceof Error) {
-        return 0;
-      }
-
-      return 0;
-    }
-  },
+  checkUser: async () => {},
 
   getUser: async (email: string): Promise<UserInfos> => {
     const response: AxiosResponse = await api.get(`/users/get-user/${email}`);
